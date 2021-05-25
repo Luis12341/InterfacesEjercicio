@@ -50,14 +50,14 @@ const Schema = gql`
     type Query {
         obtenerCantidadPuestos: PuestosDisponibles
         obtenerVehiculosEstacionados: [Estacionamiento] 
-        obtenerHistorialVehiculo(id: ID): HistorialVehiculo
-        obtenerVehiculoEstacionado(id: ID): Estacionamiento    
+        obtenerHistorialVehiculo(id: ID!): HistorialVehiculo
+        obtenerVehiculoEstacionado(id: ID!): Estacionamiento    
     }
 
     type Mutation {
         agregarVehiculo(input: InputVehiculo): Vehiculo
         entradaEstacionamiento(input: InputEstacionamiento): Estacionamiento
-        salidaEstacionamiento(input: InputEstacionamiento): Estacionamiento
+        salidaEstacionamiento(id: ID!): Estacionamiento
     }
 `
 

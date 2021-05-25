@@ -1,9 +1,9 @@
 const contarPuestos = (array) => {
-    const carros = array.map(
-        (carro) => carro.horaSalida === undefined && carro.vehiculo.tipo === "CARRO" && carro
+    const carros = array.filter(
+        (carro) => carro.horaSalida === undefined && carro.vehiculo.tipo === "CARRO" 
     );
-    const motos = array.map(
-        (carro) => carro.horaSalida === undefined && carro.vehiculo.tipo === "MOTO" && carro
+    const motos = array.filter(
+        (moto) => moto.horaSalida === undefined && moto.vehiculo.tipo === "MOTO"
     );
     console.log(carros, motos)
     return {
